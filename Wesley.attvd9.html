@@ -6,14 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="dynamicText">texto e mais texto.</p>
-    <button onclick="changeFontSize()">fonte </button>
+    <button id="happyButton">Estou feliz</button>
+    <button id="sadButton">Estou triste</button>
 
     <script>
-        function changeFontSize() {
-            var paragraph = document.getElementById("dynamicText");
-            paragraph.style.fontSize = "54px";
-        }
+        document.getElementById('happyButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'yellow';
+            document.body.innerHTML = '<h1>Estou feliz!</h1>';
+        });
+
+        document.getElementById('sadButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'blue';
+            document.body.innerHTML = '<h1>Estou triste!</h1>';
+        });
+    </script>
 
     </script>
 </body>
