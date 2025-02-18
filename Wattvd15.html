@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        #hoverText {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="texto">TESTE TESTE TESTE.</p>
+
+    <script>
+        const hoverText = document.getElementById('texto');
+
+        hoverText.addEventListener('mouseover', () => {
+            hoverText.style.color = 'blue';
+        });
+
+        hoverText.addEventListener('mouseout', () => {
+            hoverText.style.color = 'black';
+        });
+    </script>
+</body>
+</html>

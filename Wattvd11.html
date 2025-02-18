@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explosão de Cores</title>
+    <style>
+
+        button {
+            padding: 10px 20px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+ 
+    <button onclick="changeColor()">Clique para mudar a cor de fundo</button>
+
+    <script>
+
+        const colors = ['red', 'blue', 'green', ];
+        let currentColorIndex = 0;
+
+        function changeColor() {
+        
+            document.body.style.backgroundColor = colors[currentColorIndex];
+           
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>
